@@ -1,0 +1,13 @@
+.main {
+    position: absolute;
+    right: 0;
+    padding-top: 50px;
+    width: calc(100% - 250px);
+    overflow-y: scroll;
+    transition: width 0.3s ease, right 0.3s ease;
+  }
+  
+  .main.active {
+    width: 100%;
+  }
+  
