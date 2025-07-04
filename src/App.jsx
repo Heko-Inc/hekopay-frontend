@@ -28,6 +28,8 @@ import HekopayPayments from "./pages/dashboard/Payments/Hekopay/HekopayPayments"
 
 import PaymentSuccess from "./components/dashboard/PaymentSuccess/PaymentSuccess";
 
+import ForgotPassword from "./pages/Authentication/ForgotPassword/ForgotPassword";
+
 const App = () => {
   return (
     <div>
@@ -36,18 +38,24 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/sign-in" element={<Login />} />
           <Route path="/sign-up" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/policy" element={<PolicyDoc />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/transactions" element={<Transactions />} />
-          <Route path="/marketplace/payment-method" element={<PaymentMethod />} />
+          <Route
+            path="/marketplace/payment-method"
+            element={<PaymentMethod />}
+          />
           <Route path="/marketplace/send-stk-push" element={<StkPush />} />
-          <Route path="/marketplace/payment-link/:id" element={<PaymentLinkReady />} />
+          <Route
+            path="/marketplace/payment-link/:id"
+            element={<PaymentLinkReady />}
+          />
           <Route path="/payments" element={<Payments />} />
-          <Route path="/payments/hekopay" element={<HekopayPayments/>} />
+          <Route path="/payments/hekopay" element={<HekopayPayments />} />
 
-          <Route path="/payments/success" element={<PaymentSuccess/>} />
-      
+          <Route path="/payments/success" element={<PaymentSuccess />} />
         </Routes>
       </Router>
     </div>

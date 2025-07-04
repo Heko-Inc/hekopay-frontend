@@ -144,7 +144,7 @@ const Signup = () => {
         </div>
       </div>
       <Link
-        to="/privacy-policy"
+        to="/policy"
         className="absolute bottom-4 right-6 text-sm text-gray-500 hover:underline"
       >
         Privacy Policy

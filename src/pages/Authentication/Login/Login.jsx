@@ -3,6 +3,7 @@ import Login1 from "../../../assets/images/login1.png";
 import Logo from "../../../components/Logo/Logo";
 import { useNavigate, Link } from "react-router-dom";
 
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -116,7 +117,7 @@ const Login = () => {
         </div>
 
         <Link
-          to="/privacy-policy"
+          to="/policy"
           className="absolute bottom-4 right-6 text-sm text-gray-500 hover:underline"
         >
           Privacy Policy
