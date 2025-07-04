@@ -5,7 +5,6 @@ import Logo from "../../components/Logo/Logo";
 import Policy from "../../components/PrivacyPolicy/Plolicy";
 
 const PolicyDoc = () => {
-  const navigate = useNavigate();
 
   return <Policy />;
 };
