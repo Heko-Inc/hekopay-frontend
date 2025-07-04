@@ -2,6 +2,7 @@ import React from "react";
 import Login1 from "../../../assets/images/login2.png";
 import Logo from "../../../components/Logo/Logo";
 import { useNavigate, Link } from "react-router-dom";
+import Terms from "../../../components/Terms/Terms";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -143,12 +144,7 @@ const Signup = () => {
           </p>
         </div>
       </div>
-      <Link
-        to="/policy"
-        className="absolute bottom-4 right-6 text-sm text-gray-500 hover:underline"
-      >
-        Privacy Policy
-      </Link>
+    <Terms/>
     </div>
   );
 };
