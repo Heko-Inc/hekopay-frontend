@@ -7,7 +7,7 @@ export default function Policy() {
       <div className="max-w-[1000px] w-[95%] mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
         {/* Navigation Header */}
         <div className="flex justify-between items-start mb-8">
-          <Link href="/sign-in" legacyBehavior>
+          <Link to="/sign-in" legacyBehavior>
             <a className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg shadow transition-all duration-200 flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
