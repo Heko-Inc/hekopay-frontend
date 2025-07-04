@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 export default function Policy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 py-10">
-      <div className="max-w-[1000] w-[95%] mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
+      <div className="max-w-[1000px] w-[95%] mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
         {/* Navigation Header */}
         <div className="flex justify-between items-start mb-8">
           <Link href="/sign-in" legacyBehavior>
