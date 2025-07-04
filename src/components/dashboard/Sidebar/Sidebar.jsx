@@ -11,9 +11,11 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { closeSidebar } from "../../../Redux/features/SidebarSlice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   const { isOpen } = useSelector((state) => state.sidebar);
 
   const menuItems = [
@@ -39,6 +41,7 @@ const Sidebar = () => {
           <li key={to}>
             <NavLink
               to={to}
+              onClick={() => dispatch(closeSidebar())} // Close sidebar on link click
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-l-[25px] transition ${
                   isActive
