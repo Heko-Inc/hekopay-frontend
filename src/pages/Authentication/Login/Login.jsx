@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Login1 from "../../../assets/images/login1.png";
 import Logo from "../../../components/Logo/Logo";
 import { useNavigate, Link } from "react-router-dom";
@@ -6,11 +6,22 @@ import { useNavigate, Link } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
 
-  const handleLogin = () =>{
 
-    navigate("/dashboard")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  }
+  const handleLogin = () => {
+    const validEmail = "admin@example.com";
+    const validPassword = "secure123";
+
+    if (email === validEmail && password === validPassword) {
+      setError("");
+      navigate("/dashboard");
+    } else {
+      setError("Invalid email or password.");
+    }
+  };
 
   return (
     <div className="h-screen w-screen flex flex-col md:flex-row relative overflow-hidden">
@@ -45,25 +56,30 @@ const Login = () => {
             <input
               id="email"
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
               className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="password"
-              className="block mb-2 text-sm font-medium"
-            >
+            <label htmlFor="password" className="block mb-2 text-sm font-medium">
               Password
             </label>
             <input
               id="password"
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
               className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
+
+          {error && (
+            <p className="text-sm text-red-600 font-medium -mt-2">{error}</p>
+          )}
 
           <div className="flex justify-end text-sm">
             <Link
@@ -74,7 +90,10 @@ const Login = () => {
             </Link>
           </div>
 
-          <button className="w-full px-6 py-2 bg-purple-600 hover:bg-purple-800 text-white rounded font-medium">
+          <button
+            className="w-full px-6 py-2 bg-purple-600 hover:bg-purple-800 text-white rounded font-medium"
+            onClick={handleLogin}
+          >
             Login
           </button>
 
