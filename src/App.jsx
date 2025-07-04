@@ -30,6 +30,8 @@ import PaymentSuccess from "./components/dashboard/PaymentSuccess/PaymentSuccess
 
 import ForgotPassword from "./pages/Authentication/ForgotPassword/ForgotPassword";
 
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+
 const App = () => {
   return (
     <div>
@@ -56,6 +58,8 @@ const App = () => {
           <Route path="/payments/hekopay" element={<HekopayPayments />} />
 
           <Route path="/payments/success" element={<PaymentSuccess />} />
+
+          <Route path="/terms-conditions" element={<TermsAndConditions />} />
         </Routes>
       </Router>
     </div>

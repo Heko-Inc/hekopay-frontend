@@ -116,12 +116,24 @@ const Login = () => {
           </p>
         </div>
 
+      <div className="fixed flex justify-between items-center bottom-[1rem] right-[2rem] left-[2rem]">
+        <div>
         <Link
           to="/policy"
-          className="absolute bottom-4 right-6 text-sm text-gray-500 hover:underline"
+          className="block  text-sm text-gray-500 hover:underline"
         >
           Privacy Policy
         </Link>
+        </div>
+        <div>
+        <Link
+          to="/terms-conditions"
+          className="block text-sm text-gray-500 hover:underline"
+        >
+          Terms and Conditions
+        </Link>
+        </div>
+      </div>
       </div>
     </div>
   );
