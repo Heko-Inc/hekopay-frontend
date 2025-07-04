@@ -6,6 +6,12 @@ import { useNavigate, Link } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
 
+  const handleLogin = () =>{
+
+    navigate("/dashboard")
+
+  }
+
   return (
     <div className="h-screen w-screen flex flex-col md:flex-row relative overflow-hidden">
       <div className="hidden md:block relative w-1/2 h-full">

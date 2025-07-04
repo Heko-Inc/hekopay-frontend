@@ -1,13 +1,22 @@
 .main {
-    position: absolute;
-    right: 0;
-    padding-top: 50px;
-    width: calc(100% - 250px);
-    overflow-y: scroll;
-    transition: width 0.3s ease, right 0.3s ease;
+  position: absolute;
+  right: 0;
+  padding-top: 50px;
+  width: calc(100% - 250px);
+  overflow-y: scroll;
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+.main.active {
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .main {
+    width: 100%;
   }
-  
+
   .main.active {
     width: 100%;
   }
-  
+}

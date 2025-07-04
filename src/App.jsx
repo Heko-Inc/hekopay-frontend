@@ -26,6 +26,8 @@ import Payments from "./pages/dashboard/Payments/Payments";
 
 import HekopayPayments from "./pages/dashboard/Payments/Hekopay/HekopayPayments";
 
+import PaymentSuccess from "./components/dashboard/PaymentSuccess/PaymentSuccess";
+
 const App = () => {
   return (
     <div>
@@ -43,6 +45,9 @@ const App = () => {
           <Route path="/marketplace/payment-link/:id" element={<PaymentLinkReady />} />
           <Route path="/payments" element={<Payments />} />
           <Route path="/payments/hekopay" element={<HekopayPayments/>} />
+
+          <Route path="/payments/success" element={<PaymentSuccess/>} />
+      
         </Routes>
       </Router>
     </div>

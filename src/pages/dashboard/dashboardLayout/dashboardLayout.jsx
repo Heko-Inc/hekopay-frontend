@@ -9,16 +9,13 @@ import "./layout.css";
 import { useSelector } from "react-redux";
 
 const DashboardLayout = ({ children }) => {
-
   const { isOpen } = useSelector((state) => state.sidebar);
 
   return (
     <div>
       <Navbar />
-      
-
-      <div className={`main ${!isOpen ? "active" : ''}`}>{children}</div>
-      {isOpen && <Sidebar />}
+      <div className={`main ${!isOpen ? "active" : ""}`}>{children}</div>
+      <Sidebar />
     </div>
   );
 };
