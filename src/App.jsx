@@ -46,6 +46,8 @@ import Help from "./pages/Help/Help";
 
 import PayViaMpesaTill from "./pages/dashboard/PayMpesaTill/PayMpesaTill";
 
+import PayViaMpesaPayBill from "./pages/dashboard/MpesaPaybill/MpesaPaybill";
+
 const App = () => {
   return (
     <div>
@@ -95,6 +97,9 @@ const App = () => {
           <Route path="/settings" element={<Settings/>} />
 
           <Route path="/help" element={<Help/>} />
+
+
+          <Route path="/payments/mpesa-paybill" element={<PayViaMpesaPayBill/>} />
 
         </Routes>
       </Router>
