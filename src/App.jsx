@@ -43,6 +43,9 @@ import Settings from "./pages/dashboard/settings/Settings";
 
 import Help from "./pages/Help/Help";
 
+
+import PayViaMpesaTill from "./pages/dashboard/PayMpesaTill/PayMpesaTill";
+
 const App = () => {
   return (
     <div>
@@ -61,11 +64,19 @@ const App = () => {
             element={<PaymentMethod />}
           />
           <Route path="/marketplace/send-stk-push" element={<StkPush />} />
+
           <Route
             path="/marketplace/payment-link/:id"
             element={<PaymentLinkReady />}
           />
+
+<Route
+            path="/payments/mpesa-till"
+            element={<PayViaMpesaTill/>}
+          />
+
           <Route path="/payments" element={<Payments />} />
+
           <Route path="/payments/hekopay" element={<HekopayPayments />} />
 
           <Route path="/payments/success" element={<PaymentSuccess />} />

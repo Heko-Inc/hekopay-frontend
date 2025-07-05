@@ -34,7 +34,7 @@ const Sidebar = () => {
 
   const handleLogout = () => {
     
-    navigate("/sign-in"); // redirect to login page
+    navigate("/sign-in"); 
   };
 
   return (
