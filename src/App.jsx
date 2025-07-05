@@ -32,6 +32,17 @@ import ForgotPassword from "./pages/Authentication/ForgotPassword/ForgotPassword
 
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 
+import Bntc from "./pages/dashboard/bntc/Bntc";
+
+import Wallet from "./pages/dashboard/wallet/Wallet";
+
+
+import Store from "./pages/store/Store";
+
+import Settings from "./pages/dashboard/settings/Settings";
+
+import Help from "./pages/Help/Help";
+
 const App = () => {
   return (
     <div>
@@ -60,6 +71,20 @@ const App = () => {
           <Route path="/payments/success" element={<PaymentSuccess />} />
 
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
+
+          {/* dashboard */}
+
+          <Route path="/bnct" element={<Bntc />} />
+
+          <Route path="/wallet" element={<Wallet />} />
+
+
+          <Route path="/store" element={<Store/>} />
+          
+          <Route path="/settings" element={<Settings/>} />
+
+          <Route path="/help" element={<Help/>} />
+
         </Routes>
       </Router>
     </div>

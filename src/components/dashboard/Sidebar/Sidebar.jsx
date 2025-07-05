@@ -9,13 +9,15 @@ import {
   ShoppingCart,
   Settings,
   HelpCircle,
+  LogOut,
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { closeSidebar } from "../../../Redux/features/SidebarSlice";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { isOpen } = useSelector((state) => state.sidebar);
 
   const menuItems = [
@@ -30,6 +32,11 @@ const Sidebar = () => {
     { to: "/help", label: "Help Center", icon: HelpCircle },
   ];
 
+  const handleLogout = () => {
+    
+    navigate("/sign-in"); // redirect to login page
+  };
+
   return (
     <div
       className={`bg-purple-800 min-h-screen text-white w-[250px] fixed top-[50px] left-0 pl-4 py-6 z-30 transform transition-transform duration-300 ${
@@ -41,7 +48,7 @@ const Sidebar = () => {
           <li key={to}>
             <NavLink
               to={to}
-              onClick={() => dispatch(closeSidebar())} // Close sidebar on link click
+              onClick={() => dispatch(closeSidebar())}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-l-[25px] transition ${
                   isActive
@@ -55,6 +62,15 @@ const Sidebar = () => {
             </NavLink>
           </li>
         ))}
+        <li>
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-3 px-3 py-2 w-full text-left rounded-l-[25px] hover:bg-white hover:text-purple-800 transition"
+          >
+            <LogOut className="w-5 h-5" />
+            Logout
+          </button>
+        </li>
       </ul>
     </div>
   );
